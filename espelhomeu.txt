@@ -1,0 +1,45 @@
+espelhomeu;
+
+Tabela-> Nivel
+
+id (int(11)
+nome (varchar(80))
+
+
+Tabela-> Login
+
+id (int(11))
+usuario (varchar(80))
+senha (varchar(150))
+status SET(N,S)
+fk_nivel int(11) not null, foreign key (fk_nivel) references Nivel(id)
+);
+
+
+Tabela-> Agendamento
+id int
+data (date)
+fk_horario (int) not null,
+fk_cliente (int) not null,
+foreign key (fk_horario) references Horario(id),
+foreign key (fk_cliente) references Clientes
+
+Tabela-> Horario
+id (int(11)) not null auto_increment primary key,
+hora(time),
+fk_servico int(11) not null, foreign key (fk_servico) references servico(id)
+
+Tabela-> Serviço
+id (int(11)) not null auto_increment primary key,
+nome varchar(80) not null,
+descricao(text) not null,
+valor (Decimal(9,2)) not null
+
+Tabela-> Cliente
+id (int(11)) not null Auto_increment primary key,
+email (varchar(100)) not null,
+nome (varchar(80)) not null
+cpf (int(11)) not null
+rg (int(9) (int(9))
+telefone(int(11)) not null,
+fk_login int(11) not null, foreign key (fk_login) references login(id) );

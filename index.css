@@ -1,0 +1,43 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+
+div{
+    width: 400px;
+    font-size: 64px;
+    background: #333;
+}
+
+#div-1 {
+
+    position: static;
+    /*right: 100px;*/
+    /*left: 1000px;*/
+    
+    /*top: 200px;*/
+    background-color: orange;
+}
+
+#div-2 {
+
+    background-color: greenyellow;
+    position: fixed;
+    /*position: relative;
+    position: static;*/
+
+    right: 700px;
+    top: 500;
+}
+
+#div-3 {
+
+    background-color: blue;
+}
+
+#div-4{
+    background-color: red;
+}
